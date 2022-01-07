@@ -1,0 +1,326 @@
+
+English English en 
+Cebuano Cebuano ceb 
+Swedish svenska sv 
+German Deutsch de 
+French français fr 
+Dutch Nederlands nl 
+Russian ru 
+Spanish español es 
+Italian italiano it 
+Egyptian Arabic arz 
+Polish polski pl 
+Japanese ja 
+Vietnamese Tiếng Việt vi 
+Waray Winaray war 
+Chinese zh 
+Arabic ar 
+Ukrainian uk 
+Portuguese português pt 
+Persian fa 
+Catalan català ca 
+Serbian srpski sr 
+Indonesian Bahasa Indonesia id 
+Norwegian (Bokmål) norsk no 
+Korean ko 
+Finnish suomi fi 
+Hungarian magyar hu 
+Czech čeština cs 
+Turkish Türkçe tr 
+Serbo-Croatian srpskohrvatski sh 
+Chechen ce 
+Southern Min Bân-lâm-gú zh-min-nan 
+Romanian română ro 
+Basque euskara eu 
+Malay Bahasa Melayu ms 
+Tatar татарча/tatarça tt 
+Esperanto Esperanto eo 
+Hebrew he 
+Armenian hy 
+Bulgarian bg 
+Danish dansk da 
+South Azerbaijani azb 
+Slovak slovenčina sk 
+Kazakh kk 
+Minangkabau Minangkabau min 
+Estonian eesti et 
+Belarusian be 
+Croatian hrvatski hr 
+Greek el 
+Lithuanian lietuvių lt 
+Simple English Simple English simple 
+Azerbaijani azərbaycanca az 
+Galician galego gl 
+Slovene slovenščina sl 
+Urdu ur 
+Norwegian (Nynorsk) norsk nynorsk nn 
+Georgian ka 
+Hindi hi 
+Thai th 
+Tamil ta 
+Uzbek oʻzbekcha/ўзбекча uz 
+Latin Latina la 
+Welsh Cymraeg cy 
+Asturian asturianu ast 
+Volapük Volapük vo 
+Macedonian mk 
+Cantonese zh-yue 
+Bengali bn 
+Latvian latviešu lv 
+Tajik tg 
+Burmese my 
+Afrikaans Afrikaans af 
+Malagasy Malagasy mg 
+Bosnian bosanski bs 
+Occitan occitan oc 
+Albanian shqip sq 
+Low German Plattdüütsch nds 
+Marathi mr 
+Kyrgyz ky 
+Malayalam ml 
+Belarusian (Taraškievica) be-tarask 
+Telugu te 
+Newar new 
+Breton brezhoneg br 
+Swahili Kiswahili sw 
+Venetian vèneto vec 
+Piedmontese Piemontèis pms 
+Javanese Jawa jv 
+Western Punjabi pnb 
+Haitian Creole Kreyòl ayisyen ht 
+Sundanese Sunda su 
+Luxembourgish Lëtzebuergesch lb 
+Bashkir ba 
+Irish Gaeilge ga 
+Silesian ślůnski szl 
+Icelandic íslenska is 
+Kurdish (Kurmanji) kurdî ku 
+Lombard lombard lmo 
+Chuvash cv 
+West Frisian Frysk fy 
+Tagalog Tagalog tl 
+Wu wuu 
+Aragonese aragonés an 
+Scots Scots sco 
+Zazaki Zazaki diq 
+Punjabi pa 
+Kurdish (Sorani) ckb 
+Yoruba Yorùbá yo 
+Nepali ne 
+Bavarian Boarisch bar 
+Ido Ido io 
+Gujarati gu 
+Alemannic Alemannisch als 
+Kannada kn 
+Sicilian sicilianu scn 
+Bishnupriya Manipuri bpy 
+Interlingua interlingua ia 
+Quechua Runa Simi qu 
+Mongolian mn 
+Mingrelian xmf 
+Kotava Kotava avk 
+Navajo Diné bizaad nv 
+Sinhalese si 
+Samogitian žemaitėška bat-smg 
+Odia or 
+Scottish Gaelic Gàidhlig gd 
+Eastern Min Mìng-dĕ̤ng-ngṳ̄ cdo 
+Ilokano Ilokano ilo 
+Yiddish yi 
+Amharic am 
+Sindhi sd 
+Buginese bug 
+North Frisian Nordfriisk frr 
+Neapolitan Napulitano nap 
+Ossetian os 
+Crimean Tatar qırımtatarca crh 
+Upper Sorbian hornjoserbsce hsb 
+Banyumasan Basa Banyumasan map-bms 
+Maithili mai 
+Hausa Hausa ha 
+Faroese føroyskt fo 
+Sakha sah 
+Limburgish Limburgs li 
+Mazanderani mzn 
+Pashto ps 
+Emilian-Romagnol emiliàn e rumagnòl eml 
+Gorontalo Bahasa Hulontalo gor 
+Acehnese Acèh ace 
+Central Bikol Bikol Central bcl 
+Sanskrit sa 
+Walloon walon wa 
+Balinese Basa Bali ban 
+Classical Chinese zh-classical 
+Ligurian Ligure lij 
+Zulu isiZulu zu 
+Meadow Mari mhr 
+Hill Mari mrj 
+Shan shn 
+Fiji Hindi Fiji Hindi hif 
+Meitei mni 
+Assamese as 
+Hakka 客家語/Hak-kâ-ngî hak 
+Tarantino tarandíne roa-tara 
+Western Armenian hyw 
+Kapampangan Kapampangan pam 
+Khmer km 
+Interlingue Interlingue ie 
+Northern Sotho Sesotho sa Leboa nso 
+Rusyn rue 
+Northern Sami davvisámegiella se 
+Bhojpuri bh 
+West Flemish West-Vlams vls 
+Dutch Low Saxon Nedersaksies nds-nl 
+Shona chiShona sn 
+Māori Māori mi 
+Somali Soomaaliga so 
+Erzya myv 
+Nahuatl Nāhuatl nah 
+Santali sat 
+Sardinian sardu sc 
+Veps vepsän kel’ vep 
+Gan gan 
+Gilaki glk 
+Kabyle Taqbaylit kab 
+Turkmen Türkmençe tk 
+Corsican corsu co 
+Võro võro fiu-vro 
+Tibetan bo 
+Abkhazian ab 
+Komi kv 
+Kashubian kaszëbsczi csb 
+Franco-Provençal arpetan frp 
+Picard Picard pcd 
+Cornish kernowek kw 
+Uyghur Uyghurche ug 
+Udmurt udm 
+Manx Gaelg gv 
+Aymara Aymar aru ay 
+Moroccan Arabic ary 
+Zeelandic Zeêuws zea 
+Norman Nouormand nrm 
+Guarani Avañe'ẽ gn 
+Banjar Banjar bjn 
+Maltese Malti mt 
+Lezgian lez 
+Lingua Franca Nova Lingua Franca Nova lfn 
+Saterland Frisian Seeltersk stq 
+Lao lo 
+Inari Sami anarâškielâ smn 
+Mirandese Mirandés mwl 
+Saraiki skr 
+Livvi-Karelian livvinkarjala olo 
+Romansh rumantsch rm 
+Ladino Ladino lad 
+Friulian furlan fur 
+Konkani Gõychi Konknni gom 
+Anglo-Saxon Ænglisc ang 
+Komi-Permyak koi 
+Tuvan tyv 
+Lower Sorbian dolnoserbski dsb 
+Extremaduran estremeñu ext 
+Doteli dty 
+Lingala lingála ln 
+Chavacano Chavacano de Zamboanga cbk-zam 
+Dhivehi dv 
+Ripuarian Ripoarisch ksh 
+Kinyarwanda Ikinyarwanda rw 
+Gagauz Gagauz gag 
+Buryat bxr 
+Palatinate German Pälzisch pfl 
+Igbo Igbo ig 
+Avar av 
+Pali pi 
+Pangasinan Pangasinan pag 
+Awadhi awa 
+Hawaiian Hawaiʻi haw 
+Tayal Tayal tay 
+Papiamento Papiamentu pap 
+Karachay-Balkar krc 
+Kalmyk xal 
+Sakizaya Sakizaya szy 
+Zhuang Vahcuengh za 
+Pennsylvania German Deitsch pdc 
+Karakalpak Qaraqalpaqsha kaa 
+Ingush inh 
+Atikamekw Atikamekw atj 
+Tongan lea faka-Tonga to 
+Aramaic arc 
+Jamaican Patois Patois jam 
+Tok Pisin Tok Pisin tpi 
+Kabiye Kabɩyɛ kbp 
+Nauruan Dorerin Naoero na 
+Ladin Ladin lld 
+Wolof Wolof wo 
+Kabardian kbd 
+Tulu tcy 
+Moksha mdf 
+Novial Novial nov 
+Kikuyu Gĩkũyũ ki 
+Tetum tetun tet 
+Luganda Luganda lg 
+Dagbani dagbanli dag 
+Bislama Bislama bi 
+Lojban la .lojban. jbo 
+Aromanian armãneashti roa-rup 
+Fijian Na Vosa Vakaviti fj 
+Twi Twi tw 
+Kongo Kongo kg 
+Lak lbe 
+Xhosa isiXhosa xh 
+Tahitian reo tahiti ty 
+Mon mnw 
+N'Ko nqo 
+Seediq Seediq trv 
+Sranan Tongo Sranantongo srn 
+Shilha Taclḥit shi 
+Oromo Oromoo om 
+Guianan Creole kriyòl gwiyannen gcr 
+Samoan Gagana Samoa sm 
+Latgalian latgaļu ltg 
+Cherokee chr 
+Altai alt 
+Kashmiri ks 
+Nias Li Niha nia 
+Old Church Slavonic cu 
+Norfolk Norfuk Pitkern pih 
+Chewa Chi-Chewa ny 
+Gothic got 
+Sotho Sesotho st 
+Madurese Madhurâ mad 
+Amis Pangcah ami 
+Greenlandic kalaallisut kl 
+Romani romani čhib rmy 
+Tswana Setswana tn 
+Bambara bamanankan bm 
+Tsonga Xitsonga ts 
+Venda Tshivenda ve 
+Kirundi Kirundi rn 
+Cheyenne Tsetsêhestâhese chy 
+Tumbuka chiTumbuka tum 
+Inuktitut ᐃᓄᒃᑎᑐᑦ/inuktitut iu 
+Akan Akan ak 
+Swazi SiSwati ss 
+Chamorro Chamoru ch 
+Pontic Greek pnt 
+Adyghe ady 
+Inupiaq Iñupiak ik 
+Ewe eʋegbe ee 
+Fula Fulfulde ff 
+Dinka Thuɔŋjäŋ din 
+Sango Sängö sg 
+Dzongkha dz 
+Tigrinya ti 
+Paiwan pinayuanan pwn 
+Cree Nēhiyawēwin cr 
+Ndonga Oshiwambo ng 
+Choctaw Choctaw cho 
+Kuanyama Kwanyama kj 
+Marshallese Ebon mh 
+Hiri Motu Hiri Motu ho 
+Nuosu ii 
+Northern Luri lrc 
+Afar Qafár af aa 
+Muscogee Mvskoke mus 
+Herero Otsiherero hz 
+Kanuri Kanuri kr 
