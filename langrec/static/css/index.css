@@ -26,7 +26,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 20vh auto;
+    margin: 10vh auto;
     text-align: -webkit-center;
     max-width: 26em;
     filter: drop-shadow(0px 6px 3px black);
@@ -191,7 +191,7 @@ hr {
 }
 
 .header-text {
-    margin-bottom: 15vh;
+    margin-bottom: 1em;
 }
 
 .instructions {
@@ -199,7 +199,6 @@ hr {
     -moz-text-align-last: center;
     text-align-last: center;
     font-size: 1em;
-    margin-bottom: 2em;
 }
 
 .disclaimer {
@@ -215,4 +214,11 @@ hr {
     bottom: 0;
     position: fixed;
     width: 100%;
+}
+
+.fade-in {
+	-o-transition: all 0.75s;
+	-moz-transition: all 0.75s;
+	-webkit-transition: all 0.75s;
+	transition: all 0.75s;
 }

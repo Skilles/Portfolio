@@ -95,6 +95,6 @@ function showRecommendations(data) {
         let lang = languages[i];
         meters.appendChild(meter(lang.name, lang.value, lang.name.toHSL()));
     }
-    meters.removeAttribute("hidden");
+    meters.setAttribute("style", "opacity: 1");
     updateMeters();
 }
