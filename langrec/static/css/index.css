@@ -123,6 +123,12 @@ footer {
     background: #181818;
 }
 
+@media (max-width: 1400px) {
+    .meter-wrapper {
+        flex-direction: column;
+    }
+}
+
 .box {
     position: relative;
     margin: 50px;
