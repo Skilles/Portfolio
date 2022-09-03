@@ -1,15 +1,15 @@
 import json
-
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.views import generic
 import logging
 
+from django.http import HttpResponse
+from django.views import generic
+
+from langrec.forms import RecommendationForm
 # Create your views here.
 from langrec.models import Language
-from langrec.forms import RecommendationForm
 
 logger = logging.getLogger('django')
+
 
 class ListView(generic.ListView):
     template_name = 'langrec/list.html'
@@ -47,6 +47,3 @@ def recommend(request):
         print('not a get')
         form = RecommendationForm()
     return HttpResponse()
-    # return render(request, 'langrec/submit-form.html', {
-    #     'recommend': form,
-    # })

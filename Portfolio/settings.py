@@ -30,7 +30,7 @@ else:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", DEBUG) == "True"
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", str(DEBUG)) == "True"
 
 ALLOWED_HOSTS = ["127.0.0.1", "bilalmadi.com"]
 

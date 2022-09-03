@@ -12,7 +12,7 @@ Pillow = "^9.2.0"
 gunicorn = "^20.1.0"
 dj-database-url = "^1.0.0"
 psycopg2-binary = "^2.9.3"
-whitenoise = "^6.2.0"
+whitenoise = {version = "^6.2.0", extras = ["brotli"]}
 django-health-check = "^3.16.7"
 
 [build-system]
