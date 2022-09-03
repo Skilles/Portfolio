@@ -26,14 +26,13 @@ if os.path.exists('secrets.json'):
     with open('secrets.json') as f:
         SECRET_KEY = f.readline().strip()
 else:
-    SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'dummy-secret-key')
+    SECRET_KEY = os.environ.get('SECRET_KEY', 'dummy-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False") == "True"
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+DEBUG = 'RENDER' not in os.environ
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", DEBUG) == "True"
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
-# ['174.138.51.119', 'bilalmadi.com', '127.0.0.1']
+ALLOWED_HOSTS = ["127.0.0.1", "bilalmadi.com"]
 
 # Application definition
 
@@ -57,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'Portfolio.urls'
@@ -94,7 +94,7 @@ elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
     if os.getenv("DATABASE_URL", None) is None:
         raise Exception("DATABASE_URL environment variable not defined")
     DATABASES = {
-        "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
+        "default": dj_database_url.config(default=os.environ.get("DATABASE_URL"), conn_max_age=600)
     }
 
 # Password validation
@@ -146,6 +146,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# Following settings only make sense on production and may break development environments.
+if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
+    # in your application directory on Render.
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Turn on WhiteNoise storage backend that takes care of compressing static files
+    # and creating unique names for each version so they can safely be cached forever.
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')

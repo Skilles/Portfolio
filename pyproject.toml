@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "portfolio"
+version = "1.0.0"
+description = ""
+authors = ["Bilal Madi <bilalmadi17@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^4.1"
+Pillow = "^9.2.0"
+gunicorn = "^20.1.0"
+dj-database-url = "^1.0.0"
+psycopg2-binary = "^2.9.3"
+whitenoise = "^6.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
