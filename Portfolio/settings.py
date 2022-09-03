@@ -30,9 +30,13 @@ else:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", str(DEBUG)) == "True"
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", str(DEBUG)).lower() == "true"
 
-ALLOWED_HOSTS = ["127.0.0.1", "bilalmadi.com"]
+SERVE_MEDIA = os.getenv("SERVE_MEDIA", str(DEBUG)).lower() == "true"
+
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").replace(' ', '').split(",")
+
+
 
 # Application definition
 

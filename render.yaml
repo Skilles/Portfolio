@@ -31,3 +31,7 @@ services:
         value: 4
       - key: DEVELOPMENT_MODE
         value: false
+      - key: SERVE_MEDIA
+        value: true
+      - key: ALLOWED_HOSTS
+        value: bilalmadi.com,portfolio-5656.onrender.com
