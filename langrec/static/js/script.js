@@ -5,9 +5,7 @@ const suggBox = searchWrapper.querySelector(".autocom-box");
 const icon = searchWrapper.querySelector(".icon");
 let hiddenLangList = document.getElementById("lang-input")
 let langList = document.getElementById("languages")
-let linkTag = searchWrapper.querySelector("a");
 let meters = document.querySelector(".meter-wrapper");
-let webLink;
 
 // if user press any key and release
 inputBox.onkeyup = (e)=>{
@@ -42,7 +40,7 @@ inputBox.onkeyup = (e)=>{
 
 // select a language from the list and add it to the necessary elements
 function select(lang_name){
-    console.log(lang_name)
+    // console.log(lang_name)
     searchWrapper.classList.remove("active");
     const item = document.createElement("li");
     item.setAttribute("style", "color: " + lang_name.toHSL())
@@ -53,7 +51,7 @@ function select(lang_name){
     } else {
         hiddenLangList.value += "," + lang_name;
     }
-    console.log(hiddenLangList)
+    // console.log(hiddenLangList)
     inputBox.value = '';
 }
 
@@ -74,7 +72,7 @@ function showSuggestions(list) {
 const meter = (name, value, color) => {
     let meter = document.createElement("div");
     meter.classList.add("box");
-    let percent = parseInt(value * 100);
+    let percent = value * 100;
     meter.innerHTML = `<div class="circle" data-dots="70" data-percent="${percent}" style="--bgColor: ${color}"></div>
             <div class="text">
                 <h2>${percent}%</h2>

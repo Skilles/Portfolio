@@ -18,21 +18,21 @@ function updateMeters() {
 }
 
 String.prototype.toHSL = function(opts) {
-    var h, s, l;
+    let h, s, l;
     opts = opts || {};
     opts.hue = opts.hue || [0, 360];
     opts.sat = opts.sat || [75, 100];
     opts.lit = opts.lit || [40, 60];
 
-    var range = function(hash, min, max) {
-        var diff = max - min;
-        var x = ((hash % diff) + diff) % diff;
+    const range = function (hash, min, max) {
+        const diff = max - min;
+        const x = ((hash % diff) + diff) % diff;
         return x + min;
-    }
+    };
 
-    var hash = 0;
+    let hash = 0;
     if (this.length === 0) return hash;
-    for (var i = 0; i < this.length; i++) {
+    for (let i = 0; i < this.length; i++) {
         hash = this.charCodeAt(i) + ((hash << 5) - hash);
         hash = hash & hash;
     }

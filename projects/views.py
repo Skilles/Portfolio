@@ -11,6 +11,6 @@ class IndexView(generic.ListView):
         return Project.objects.order_by('-date')[:5]
 
 
-class DetailView(generic.DetailView):
+class ProjectView(generic.DetailView):
     model = Project
     template_name = 'projects/project.html'

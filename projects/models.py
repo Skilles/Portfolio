@@ -5,10 +5,14 @@ from django.db import models
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    language = models.CharField(max_length=20)
-    image = models.ImageField(upload_to='images/', default='projects/static/images/default.jpg')
+    languages = models.CharField(max_length=200, default='')
+    image = models.ImageField(default='static/images/default.jpg')
     date = models.DateTimeField('date created')
-    link = models.URLField(blank=True)
+    link = models.URLField(blank=False)
+    try_link = models.URLField(blank=True, null=True)
+
+    def languages_as_list(self) -> list[str]:
+        return self.languages.replace(' ', '').split(',')
 
     def __str__(self):
         return self.title

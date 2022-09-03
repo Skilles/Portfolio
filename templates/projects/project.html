@@ -2,19 +2,27 @@
 {% load static %}
 
 {% block page_content %}
-<h1 class="text-white">{{ project.title }}</h1>
 <div class="row text-white">
+    <h1 class="text-white pt-2">{{ project.title }}</h1>
     <div class="col-md-8">
-        <img src="{% static project.image %}" alt="" width="100%">
+        <img src="{{ project.image.url }}" alt="" width="100%">
     </div>
     <div class="col-md-4">
-        <h5>Description:</h5>
+        <h5>Description</h5>
         <p>{{ project.description }}</p>
         <br>
-        <h5>Language:</h5>
-        <p>{{ project.language }}</p>
+        <h5>Languages</h5>
+        <ul>
+        {% for language in project.languages_as_list %}
+            <li>{{ language }}</li>
+        {% endfor %}
+        </ul>
         <br>
+        <h5>Links</h5>
         <a href="{{ project.link }}"><h6>Github</h6></a>
+        {% if project.try_link %}
+            <a href="{{ project.try_link }}"><h6>Demo</h6></a>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

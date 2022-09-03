@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<object class="w-100 vh-100" data="{% static "resume.pdf" %}"  type="application/pdf"></object>
+{% endblock %}
