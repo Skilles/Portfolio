@@ -13,7 +13,7 @@ services:
     env: python
     buildCommand: "./build.sh"
     startCommand: "gunicorn Portfolio.wsgi:application"
-    plan: free
+    plan: starter
     region: ohio
     healthCheckPath: /health
     domains:
