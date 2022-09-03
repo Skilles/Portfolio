@@ -15,6 +15,7 @@ services:
     startCommand: "gunicorn Portfolio.wsgi:application"
     plan: free
     region: ohio
+    healthCheckPath: /health
     domains:
       - bilalmadi.com
     envVars:
