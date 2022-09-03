@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-<object class="w-100 vh-100" data="{% static "resume.pdf" %}"  type="application/pdf"></object>
+<object class="w-100 vh-100" data="{% static "resume.pdf" %}" type="application/pdf">
+    <embed class="w-100 vh-100" src="{% static "resume.pdf" %}" type="application/pdf">
+</object>
 {% endblock %}

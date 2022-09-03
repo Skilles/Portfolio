@@ -6,9 +6,8 @@ from . import views
 app_name = 'home'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    path('resume/', views.ResumeView.as_view(), name='resume'),
     path(
         'robots.txt',
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
-    ),
+    )
 ]
