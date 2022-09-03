@@ -1,9 +1,9 @@
 from django import forms
 from langrec.models import Language
 
-import language_recommender.langrec
+from langrec.core.langrec import LanguageRecommender
 
-LANGUAGE_RECOMMENDER = language_recommender.langrec.LanguageRecommender()
+LANGUAGE_RECOMMENDER = LanguageRecommender()
 
 
 class RecommendationForm(forms.Form):

@@ -1,6 +1,7 @@
-import language_recommender.codes as codes
 import json
 from collections import defaultdict
+from langrec.core import codes
+
 
 class Language:
     def __init__(self, code, name, data):
