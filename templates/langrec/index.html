@@ -3,13 +3,12 @@
 {% block page_content %}
 <div class="wrapper">
     <h1 class="text-warning display-4 header-text">Language Matcher</h1>
-
     <p class="text-warning lead instructions">Enter the languages below and use the slider to indicate the number of recommendations you want</p>
     <div class="search-input">
         <a href="" target="_blank" hidden></a>
-
-        <input type="text" placeholder="Type to search..">
-
+        <label>
+            <input type="text" placeholder="Type to search...">
+        </label>
         <div class="autocom-box">
             <!-- here list are inserted from javascript -->
         </div>
@@ -17,16 +16,18 @@
     </div>
     <form method="get" id="lang-form">
         {% csrf_token %}
-        <input title="languages" type="hidden" name="languages" id="lang-input" value="">
-        <label for="count-range"></label><input title="count" placeholder="" type="range" name="count" class="form-range" min="1" max="5" step="1" id="count-range" value="3">
+        <label for="count-range"></label>
+        <input title="count" placeholder="" type="range" name="count" class="form-range" min="1" max="5" step="1" id="count-range" value="3">
         <button type="submit" class="btn-submit btn btn-warning">
             <p>Get Similar Languages</p>
         </button>
     </form>
+    <br>
+    <a class="btn btn-outline-warning" href="{% url "langrec:list" %}">Language List</a>
     <div id="languages"></div>
     <div class="meter-wrapper fade-in" style="opacity: 0">
         <div class="box">
-
+            <!-- here meters are inserted from javascript -->
         </div>
     </div>
 </div>
@@ -37,32 +38,19 @@
 </p>
 <div class="disclaimer">
     <p class="text-warning">
-        NOTE: This app uses trigrams (word triplets) to determine similarities between languages. It does not account for grammar or semantics.
+        Disclaimer: This app uses trigrams (word triplets) to determine similarities between languages. It does not account for grammar or semantics. Some languages are not included due to lack of data.
     </p>
 </div>
 {% endblock %}
 {% block outside_body %}
-<script src="{% static 'js/suggestions.js' %}"></script>
-<script src="{% static 'js/script.js' %}"></script>
-<script src={% static 'js/meter.js' %}></script>
+<script src="{% static 'js/langrec.js' %}"></script>
 <script type="text/javascript">
     $(document).on('submit', '#lang-form', function (e) {
         e.preventDefault();
-        $.ajax({
-            type: 'GET',
-            url: '{% url "langrec:recommend" %}',
-            data:
-                {
-                    languages: $("#lang-input").val(),
-                    count: $("#count-range").val(),
-                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
-                },
-            success: function (data) {
-                showRecommendations(data);
-            }
-        })
-        hiddenLangList.value = "";
-        langList.innerHTML = "";
+        submit('{% url "langrec:recommend" %}')
+    });
+    $(document).ready(function () {
+        cacheAllLanguages('{% url "langrec:list" %}');
     });
 </script>
 {% endblock %}

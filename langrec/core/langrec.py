@@ -55,10 +55,10 @@ class LanguageRecommender:
                 print('File not found: ' + language)
         self.data_read = True
 
-    def read_from_db(self, objects):
+    async def read_from_db(self, objects):
         if self.data_read:
             return
-        for language in objects:
+        async for language in objects:
             self.languages[language.code] = Language(language.code, language.name, language.data)
         self.data_read = True
 

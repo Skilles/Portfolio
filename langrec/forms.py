@@ -1,4 +1,8 @@
+import json
+
 from django import forms
+from django.http import HttpResponse
+
 from langrec.models import Language
 
 from langrec.core.langrec import LanguageRecommender
@@ -13,7 +17,6 @@ class RecommendationForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(RecommendationForm, self).__init__(*args, **kwargs)
         self.recommender = LANGUAGE_RECOMMENDER
-        self.recommender.read_from_db(Language.objects.all())
 
     def clean_data(self):
         languages = self.cleaned_data['languages']
@@ -26,3 +29,14 @@ class RecommendationForm(forms.Form):
         codes = self.recommender.reverse_lookup(*languages.split(','))
         recommendations = self.recommender.get_recommendations(count, *codes)
         return recommendations
+
+    def get_response(self):
+        self.cleaned_data = self.clean_data()
+        recommendations = self.get_recommendations(*self.cleaned_data)
+        data = []
+        for r in recommendations:
+            data.append(r[0].to_json(r[1]))
+        return HttpResponse(json.dumps(data, indent=4), content_type='text/json')
+
+    async def cache(self):
+        await self.recommender.read_from_db(Language.objects.all())

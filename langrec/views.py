@@ -1,5 +1,4 @@
 import json
-import logging
 
 from django.http import HttpResponse
 from django.views import generic
@@ -7,8 +6,6 @@ from django.views import generic
 from langrec.forms import RecommendationForm
 # Create your views here.
 from langrec.models import Language
-
-logger = logging.getLogger('django')
 
 
 class ListView(generic.ListView):
@@ -18,32 +15,31 @@ class ListView(generic.ListView):
     def get_queryset(self):
         return Language.objects.order_by('name')
 
+    async def get(self, request, *args, **kwargs):
+        if request.GET.get('json', 'false') == 'true':
+            return HttpResponse(await self.get_language_names_json(), content_type='text/json')
+
+        return super().get(request, *args, **kwargs)
+
+    @staticmethod
+    async def get_language_names_json():
+        names = [lang.name async for lang in Language.objects.all()]
+        return json.dumps(names)
+
 
 class IndexView(generic.FormView):
     template_name = 'langrec/index.html'
     form_class = RecommendationForm
     success_url = '/'
 
-    def form_valid(self, form):
-        logger.info('form_valid called')
-        return super().form_valid(form)
 
-
-def recommend(request):
-    if request.method == 'GET':
-        form = RecommendationForm(request.GET)
-        # logger.log(logging.INFO, form.cleaned_data)
+async def recommend(request):
+    if request.method == 'POST':
+        form = RecommendationForm(request.POST)
+        await form.cache()
         if form.is_valid():
-            logger.log(logging.INFO, 'form valid')
-            form.cleaned_data = form.clean_data()
-            recommendations = form.get_recommendations(*form.cleaned_data)
-            data = []
-            for r in recommendations:
-                data.append(r[0].to_json(r[1]))
-            return HttpResponse(json.dumps(data, indent=4), content_type='text/json')
+            return form.get_response()
         else:
-            logger.log(logging.INFO, 'form invalid')
-    else:
-        print('not a get')
-        form = RecommendationForm()
-    return HttpResponse()
+            return HttpResponse('Invalid form', status=400)
+    return HttpResponse('Invalid request', status=400)
+
