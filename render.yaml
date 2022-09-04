@@ -12,10 +12,10 @@ services:
     name: portfolio
     env: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn Portfolio.wsgi:application"
+    startCommand: "gunicorn Portfolio.asgi:application -w 4 -k uvicorn.workers.UvicornWorker"
     plan: starter
     region: ohio
-    healthCheckPath: /health
+    healthCheckPath: /health/?format=json
     domains:
       - bilalmadi.com
     envVars:
