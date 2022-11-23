@@ -10,6 +10,7 @@ class Project(models.Model):
     date = models.DateTimeField('date created')
     link = models.URLField(blank=False)
     try_link = models.URLField(blank=True, null=True)
+    is_hidden = models.BooleanField(default=False)
 
     def languages_as_list(self) -> list[str]:
         return self.languages.replace(' ', '').split(',')

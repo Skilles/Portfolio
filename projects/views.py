@@ -8,7 +8,7 @@ class IndexView(generic.ListView):
     context_object_name = 'projects'
 
     def get_queryset(self):
-        return Project.objects.order_by('-date')[:5]
+        return Project.objects.filter(is_hidden=False).order_by('-date')
 
 
 class ProjectView(generic.DetailView):
